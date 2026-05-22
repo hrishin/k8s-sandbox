@@ -1,0 +1,8 @@
+name: scaleaway
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Self-managed Kubernetes cluster on Scaleway bare metal provisioned with Pulumi
+backend:
+  url: file://~/.pulumi-local

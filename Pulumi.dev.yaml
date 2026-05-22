@@ -1,0 +1,8 @@
+encryptionsalt: v1:GTirIcBQVUM=:v1:u8D14IqkutNdOWst:yFzSKHx1X2rOojzwf+pxfIA0Ltqhcw==
+config:
+  scaleaway:controlPlaneCount: "3"
+  scaleaway:workerCount: "1"
+  scaleaway:instanceType: PLAY2-MICRO
+  scaleaway:lbType: LB-S
+  scaleaway:k8sVersion: "1.36"
+  scaleaway:zone: fr-par-2
