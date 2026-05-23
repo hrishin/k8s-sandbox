@@ -119,7 +119,7 @@ pulumi config set k8sVersion 1.34
 | `controlPlaneCount` | `3` | Number of control-plane nodes |
 | `workerCount` | `1` | Number of worker nodes |
 | `lbType` | `LB-S` | Load balancer SKU |
-| `k8sVersion` | `1.34` | Kubernetes minor version |
+| `k8sVersion` | `1.36` | Kubernetes minor version |
 
 ---
 
