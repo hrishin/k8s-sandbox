@@ -1,4 +1,4 @@
-# scaleaway — Self-Managed Kubernetes on Scaleway
+# Scaleaway — Self-Managed Kubernetes on Scaleway
 
 Provisions a self-managed Kubernetes cluster on Scaleway using VM instances using Pulumi (Python). 
 Spins up control-plane nodes behind a Scaleway Load Balancer and N worker nodes, then bootstraps the cluster via kubeadm over SSH. 
@@ -26,7 +26,7 @@ Pulumi state is stored **locally** at `~/.pulumi-local` — no Pulumi Cloud acco
 ### 1. Clone and configure credentials
 
 ```bash
-git clone <repo-url> scaleaway
+git clone https://github.com/hrishin/k8s-scaleaway.git scaleaway
 cd scaleaway
 ```
 
