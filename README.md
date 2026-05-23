@@ -23,13 +23,21 @@ Pulumi state is stored **locally** at `~/.pulumi-local` — no Pulumi Cloud acco
 
 ## Quick start
 
-### 1. Clone and configure credentials
+### 1. Clone 
 
 ```bash
 git clone https://github.com/hrishin/k8s-scaleaway.git scaleaway
 cd scaleaway
 ```
 
+### 2. Install Python dependencies
+
+```bash
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+```
+### 3. Setup credentials
 Edit `.envrc` with your Scaleway credentials:
 
 ```bash
@@ -42,15 +50,8 @@ source venv/bin/activate
 
 Then either `direnv allow` (if you use direnv) or `source .envrc` manually each session.
 
-### 2. Install Python dependencies
 
-```bash
-python -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
-
-### 3. Provision the cluster
+### 4. Provision the cluster
 
 ```bash
 ./cluster.sh up
@@ -66,7 +67,7 @@ This single command:
 
 Expect ~10 minutes end-to-end.
 
-### 4. Access the cluster
+### 5. Access the cluster
 
 ```bash
 export KUBECONFIG="$PWD/kubeconfig-scaleaway.yaml"
@@ -79,7 +80,7 @@ All nodes should show `Ready` once Cilium finishes its rollout:
 kubectl -n kube-system get pods -l k8s-app=cilium
 ```
 
-### 5. Tear down
+### 6. Tear down
 
 ```bash
 ./cluster.sh down
